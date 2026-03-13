@@ -14,7 +14,7 @@ jobs:
         id: check
         run: |
           # The known date from our last sync
-          KNOWN_DATE="2025-04-29"
+          KNOWN_DATE="2024-01-01"
 
           # Fetch the page and extract dateModified from JSON-LD structured data
           PAGE=$(curl -s "https://developer.chrome.com/docs/extensions/reference/permissions-list")
