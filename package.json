@@ -1,0 +1,25 @@
+{
+  "name": "chrome-extension-permission-check",
+  "version": "1.0.0",
+  "description": "GitHub Action to detect Chrome Extension MV3 permission escalations between manifest.json versions",
+  "type": "module",
+  "main": "dist/index.mjs",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "github-action",
+    "chrome-extension",
+    "manifest-v3",
+    "permissions",
+    "ci"
+  ],
+  "author": "Toumash",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Toumash/chrome-extension-permission-check.git"
+  }
+}

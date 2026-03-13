@@ -1,0 +1,17 @@
+{
+  "name": "Test Extension Dangerous Update",
+  "version": "2.0.0",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab", "tabs", "history"],
+  "host_permissions": [
+    "https://example.com/*",
+    "https://*.google.com/*",
+    "https://evil.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://example.com/*", "https://new-domain.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

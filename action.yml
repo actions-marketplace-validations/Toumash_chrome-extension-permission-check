@@ -1,0 +1,29 @@
+name: 'Chrome Extension Permission Check'
+description: 'Detects Chrome Extension MV3 permission escalations between two manifest.json files. Predicts if an update will disable the extension and prompt users to re-approve.'
+author: 'Toumash'
+
+branding:
+  icon: 'shield'
+  color: 'red'
+
+inputs:
+  baseline-manifest:
+    description: 'Path to the baseline (current/production) manifest.json'
+    required: true
+  new-manifest:
+    description: 'Path to the new (PR/updated) manifest.json'
+    required: true
+  fail-on-warning:
+    description: 'Whether to fail the action (exit 1) when permission warnings are detected. Default: true'
+    required: false
+    default: 'true'
+
+outputs:
+  warning_detected:
+    description: 'Whether new permission warnings were detected (true/false)'
+  new_permissions:
+    description: 'Comma-separated list of new permissions/hosts that trigger warnings'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.mjs'
