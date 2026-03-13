@@ -1,5 +1,5 @@
 name: 'Chrome Extension Permission Check'
-description: 'Detects Chrome Extension MV3 permission escalations between two manifest.json files. Predicts if an update will disable the extension and prompt users to re-approve.'
+description: 'Detect Chrome MV3 permission escalations that would disable your extension for users.'
 author: 'Toumash'
 
 branding:
