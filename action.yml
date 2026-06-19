@@ -25,5 +25,5 @@ outputs:
     description: 'Comma-separated list of new permissions/hosts that trigger warnings'
 
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'dist/index.mjs'
